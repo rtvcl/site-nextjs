@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { BiMapPin, BiMenu } from 'react-icons/bi';
-import { useAppContext } from '../context/application';
+import { ApplicationContextType, useAppContext } from '../context/application';
 import { DrawerOpen } from './drawer.component';
 
 type Props = {};
 
 const TopMenu = (props: Props) => {
-  const { setIsScroll, isScroll } = useAppContext();
+  const { isScroll } = useAppContext() as ApplicationContextType;
 
   return (
     <div

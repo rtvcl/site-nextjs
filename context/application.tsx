@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from 'react';
 
-type ApplicationContextType = {
+export type ApplicationContextType = {
   isScroll: boolean;
   setIsScroll: (isScroll: boolean) => void;
 };

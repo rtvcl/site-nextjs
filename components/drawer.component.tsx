@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { BiX } from 'react-icons/bi';
 import DrawerFooter from './drawerFooter.component';
-import { useAppContext } from '../context/application';
+import { ApplicationContextType, useAppContext } from '../context/application';
 
 type Props = {
   children: React.ReactNode;
@@ -23,7 +23,7 @@ const NavigationList: NavigationItem[] = [
 const DRAWER_ID = 'my-drawer';
 
 const DrawerWrapper = (props: Props) => {
-  const { setIsScroll, isScroll } = useAppContext();
+  const { setIsScroll } = useAppContext() as ApplicationContextType;
   const scrollArea = useRef<HTMLDivElement>(null);
   const handleScroll = (e: Event) => {
     if (scrollArea && scrollArea.current) {

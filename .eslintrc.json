@@ -1,7 +1,14 @@
+// {
+//   "extends": "next/core-web-vitals",
+//   "plugins": ["prettier"],
+//   "rules": {
+//     "prettier/prettier": "error"
+//   }
+// }
 {
-  "extends": "next/core-web-vitals",
-  "plugins": ["prettier"],
+  "extends": "next",
   "rules": {
-    "prettier/prettier": "error"
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off"
   }
 }

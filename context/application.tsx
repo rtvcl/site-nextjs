@@ -1,6 +1,12 @@
 import React, { useContext, useRef, useState } from 'react';
 
-export const ApplicationContext = React.createContext({});
+type ApplicationContextType = {
+  isScroll: boolean;
+  setIsScroll: (isScroll: boolean) => void;
+};
+
+export const ApplicationContext =
+  React.createContext<ApplicationContextType | null>(null);
 
 export const ApplicationProvider = ({
   children,
